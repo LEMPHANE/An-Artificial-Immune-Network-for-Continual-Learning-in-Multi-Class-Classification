@@ -1,0 +1,52 @@
+J.A.R.V.I.S. — Sequential ANN and Replay Study
+====================================================
+
+EXPERIMENT CONFIGURATION
+Class order: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Seeds: [7, 21, 42]
+Training samples per class: 6000
+Epochs per class: 15
+Hidden layers: (256, 128)
+Replay capacities: [100, 500, 1000, 2000]
+
+FINAL-STAGE RESULTS
+Mean and standard deviation across seeds
+
+No replay: overall=0.0501 +/- 0.0001; final class=1.0000; previous classes=0.0001; run time=230.4s
+Buffer 100: overall=0.5643 +/- 0.0543; final class=0.9993; previous classes=0.5395; run time=242.6s
+Buffer 500: overall=0.6705 +/- 0.1168; final class=0.9987; previous classes=0.6524; run time=188.6s
+Buffer 1000: overall=0.7296 +/- 0.1154; final class=0.9973; previous classes=0.7146; run time=183.3s
+Buffer 2000: overall=0.8009 +/- 0.0479; final class=0.9973; previous classes=0.7900; run time=217.4s
+
+STAGE-BY-STAGE MEAN OVERALL ACCURACY
+Stage | Classes seen | No replay | Buffer 100 | Buffer 500 | Buffer 1000 | Buffer 2000
+-------------------------------------------------------------------------------------
+    1 |            1 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000
+    2 |            2 | 0.5366 | 0.9978 | 0.9987 | 0.9987 | 0.9994
+    3 |            3 | 0.3279 | 0.9390 | 0.9833 | 0.9903 | 0.9943
+    4 |            4 | 0.2430 | 0.8421 | 0.9520 | 0.9709 | 0.9812
+    5 |            5 | 0.1911 | 0.8867 | 0.9603 | 0.9731 | 0.9820
+    6 |            6 | 0.1479 | 0.7326 | 0.9172 | 0.9498 | 0.9653
+    7 |            7 | 0.1371 | 0.7590 | 0.9202 | 0.9423 | 0.9602
+    8 |            8 | 0.1282 | 0.7428 | 0.9073 | 0.9394 | 0.9549
+    9 |            9 | 0.1083 | 0.6004 | 0.8589 | 0.9176 | 0.9345
+   10 |           10 | 0.1009 | 0.5429 | 0.8230 | 0.8854 | 0.9184
+   11 |           11 | 0.0909 | 0.7541 | 0.8939 | 0.9219 | 0.9456
+   12 |           12 | 0.0833 | 0.7258 | 0.8839 | 0.9104 | 0.9369
+   13 |           13 | 0.0769 | 0.7031 | 0.8543 | 0.8973 | 0.9310
+   14 |           14 | 0.0714 | 0.6435 | 0.8437 | 0.8744 | 0.9101
+   15 |           15 | 0.0667 | 0.6194 | 0.7890 | 0.7995 | 0.8650
+   16 |           16 | 0.0625 | 0.7033 | 0.8456 | 0.8629 | 0.8923
+   17 |           17 | 0.0588 | 0.5332 | 0.6877 | 0.7142 | 0.7665
+   18 |           18 | 0.0556 | 0.6062 | 0.7613 | 0.7438 | 0.8414
+   19 |           19 | 0.0526 | 0.4742 | 0.6979 | 0.7110 | 0.8208
+   20 |           20 | 0.0501 | 0.5643 | 0.6705 | 0.7296 | 0.8009
+
+INTERPRETATION
+- Overall accuracy measures performance on all introduced classes.
+- New-class accuracy measures learning of the latest class.
+- Previous-class accuracy measures retention of earlier classes.
+- Minimum class accuracy reveals poorly retained classes.
+- Compare buffer sizes at matching seeds and stages.
+- Replay uses stored training examples; validation data is excluded.
+- Results are specific to this MLP architecture and training protocol.

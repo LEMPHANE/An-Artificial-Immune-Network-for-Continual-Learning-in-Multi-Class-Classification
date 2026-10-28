@@ -1,0 +1,64 @@
+J.A.R.V.I.S. CLONALG — Parameter Study Summary
+Generated: 2026-10-19T09:43:55.900577+00:00
+Training samples/class: 6000
+Test samples/class: 1000
+Epochs/class: 15
+Seeds: [7, 42]
+Configurations: 19
+
+BEST AFTER MNIST (10 CLASSES)
+Configuration: config_10 (batch_size=16)
+Mean accuracy: 0.858880
+Standard deviation: 0.005781
+Per-seed accuracy: {"7": 0.8629675, "42": 0.85479256}
+Parameters: {"alpha_max": 0.5, "batch_size": 16, "memory_size": 10, "metric": "euclidean", "mutation_rate": 0.2, "n_neighbors": 3, "noise_std": 0.1, "num_clones": 3, "population_size": 20, "selection_size": 3, "similarity_threshold": 7.5, "weights": "distance"}
+
+RANKING
+1. config_10 (batch_size=16): mean=0.858880, std=0.005781
+2. config_08 (similarity_threshold=6.0): mean=0.857858, std=0.001590
+3. config_05 (memory_size=15): mean=0.856785, std=0.003830
+4. config_18 (interaction_1): mean=0.853720, std=0.004119
+5. config_01 (baseline): mean=0.850961, std=0.009610
+6. config_02 (population_size=10): mean=0.847537, std=0.000000
+7. config_06 (mutation_rate=0.1): mean=0.845749, std=0.002095
+8. config_17 (alpha_max=0.2): mean=0.844114, std=0.003974
+9. config_12 (noise_std=0.05): mean=0.843910, std=0.005853
+10. config_15 (num_clones=5): mean=0.842172, std=0.003107
+11. config_09 (similarity_threshold=11.0): mean=0.836603, std=0.005636
+12. config_03 (population_size=30): mean=0.834253, std=0.001445
+13. config_04 (memory_size=5): mean=0.831392, std=0.009249
+14. config_11 (batch_size=64): mean=0.825261, std=0.005781
+15. config_16 (n_neighbors=7): mean=0.791079, std=0.008021
+16. config_07 (mutation_rate=0.5): mean=0.787400, std=0.008454
+17. config_14 (selection_size=1): mean=0.781525, std=0.009393
+18. config_19 (interaction_2): mean=0.761292, std=0.000723
+19. config_13 (noise_std=0.3): mean=0.747088, std=0.028180
+
+BEST AFTER ALL 20 CLASSES
+Configuration: config_10 (batch_size=16)
+Mean accuracy: 0.794476
+Standard deviation: 0.005325
+Per-seed accuracy: {"7": 0.7907106, "42": 0.79824118}
+Parameters: {"alpha_max": 0.5, "batch_size": 16, "memory_size": 10, "metric": "euclidean", "mutation_rate": 0.2, "n_neighbors": 3, "noise_std": 0.1, "num_clones": 3, "population_size": 20, "selection_size": 3, "similarity_threshold": 7.5, "weights": "distance"}
+
+RANKING
+1. config_10 (batch_size=16): mean=0.794476, std=0.005325
+2. config_01 (baseline): mean=0.787097, std=0.003467
+3. config_05 (memory_size=15): mean=0.786945, std=0.001823
+4. config_02 (population_size=10): mean=0.783963, std=0.006611
+5. config_08 (similarity_threshold=6.0): mean=0.783483, std=0.003788
+6. config_15 (num_clones=5): mean=0.782422, std=0.006290
+7. config_18 (interaction_1): mean=0.781841, std=0.002394
+8. config_03 (population_size=30): mean=0.779389, std=0.003002
+9. config_06 (mutation_rate=0.1): mean=0.779111, std=0.007541
+10. config_12 (noise_std=0.05): mean=0.777166, std=0.004289
+11. config_17 (alpha_max=0.2): mean=0.775498, std=0.015510
+12. config_09 (similarity_threshold=11.0): mean=0.775473, std=0.000536
+13. config_04 (memory_size=5): mean=0.765870, std=0.008613
+14. config_11 (batch_size=64): mean=0.761094, std=0.010221
+15. config_16 (n_neighbors=7): mean=0.739639, std=0.002037
+16. config_07 (mutation_rate=0.5): mean=0.738805, std=0.006504
+17. config_14 (selection_size=1): mean=0.721268, std=0.001572
+18. config_19 (interaction_2): mean=0.717679, std=0.003145
+19. config_13 (noise_std=0.3): mean=0.706863, std=0.014081
+

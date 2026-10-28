@@ -1,0 +1,707 @@
+/* ============================================================
+   J.A.R.V.I.S. UI Design System
+   Palette adapted from the Presentation PowerPoint
+
+   Background : #121316
+   Panel      : #1B1D21
+   Accent     : #C84628
+   Accent hot : #EB5B3B
+   Text       : #F5F6F8
+   Muted      : #A5A9B2
+   Border     : #373A40
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   APPLICATION FOUNDATION
+   ------------------------------------------------------------ */
+
+QMainWindow,
+QWidget#centralwidget {
+    background-color: #121316;
+    color: #F5F6F8;
+    font-family: "Aptos";
+    font-size: 10pt;
+}
+
+QWidget {
+    color: #F5F6F8;
+    selection-background-color: #C84628;
+    selection-color: #FFFFFF;
+}
+
+QMainWindow::separator {
+    background-color: #373A40;
+    width: 1px;
+    height: 1px;
+}
+
+
+/* ------------------------------------------------------------
+   MAIN HEADER
+   ------------------------------------------------------------ */
+
+QLabel#label_2 {
+    color: #F5F6F8;
+    font-family: "Aptos";
+    font-size: 19pt;
+    font-weight: 600;
+    padding: 0px 0px 8px 0px;
+    border-bottom: 2px solid #C84628;
+}
+
+
+/* ------------------------------------------------------------
+   SECTION HEADINGS
+   ------------------------------------------------------------ */
+
+/* Viewer and Training status headings */
+
+QLabel#label_8,
+QLabel#label_7 {
+    color: #F5F6F8;
+    font-size: 11pt;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+
+/* Summary and detailed information headings */
+
+QLabel#label_3,
+QLabel#label_14 {
+    color: #C84628;
+    font-family: "Aptos Mono";
+    font-size: 9pt;
+    font-weight: 700;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #373A40;
+}
+
+/* Performance chart heading */
+
+QLabel#label_9 {
+    color: #F5F6F8;
+    font-size: 11pt;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+
+/* Small viewer information */
+
+QLabel#label_10 {
+    color: #A5A9B2;
+    font-size: 9pt;
+    padding: 3px;
+}
+
+
+/* ------------------------------------------------------------
+   INFORMATION LABELS
+   ------------------------------------------------------------ */
+
+QLabel#label_4,
+QLabel#label_5,
+QLabel#label_6,
+QLabel#label_11,
+QLabel#label_12,
+QLabel#label_13,
+QLabel#label_15 {
+    color: #A5A9B2;
+    font-size: 9pt;
+    padding: 3px 0px;
+}
+
+/* Algorithm label */
+
+QLabel#label_4 {
+    color: #EB5B3B;
+    font-family: "Aptos Mono";
+    font-size: 9pt;
+    padding: 6px 8px;
+    background-color: #24272D;
+    border: 1px solid #373A40;
+    border-radius: 5px;
+}
+
+/* Metric labels: make the numbers easier to scan */
+
+QLabel#label_12,
+QLabel#label_13,
+QLabel#label_15 {
+    color: #F5F6F8;
+    padding: 5px 0px;
+}
+
+
+/* ------------------------------------------------------------
+   BUTTON BASE STYLE
+   ------------------------------------------------------------ */
+
+QPushButton {
+    background-color: #24272D;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    border-radius: 6px;
+    padding: 8px 14px;
+    min-height: 18px;
+    font-family: "Aptos";
+    font-size: 10pt;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: #2D3037;
+    border-color: #656973;
+}
+
+QPushButton:pressed {
+    background-color: #191B1F;
+    border-color: #C84628;
+    padding-top: 9px;
+    padding-bottom: 7px;
+}
+
+QPushButton:focus {
+    border: 1px solid #EB5B3B;
+}
+
+QPushButton:disabled {
+    background-color: #1B1D21;
+    color: #626670;
+    border-color: #2B2D32;
+}
+
+
+/* ------------------------------------------------------------
+   PRIMARY ACTION - TRAIN
+   ------------------------------------------------------------ */
+
+QPushButton#pushButton_2 {
+    background-color: #C84628;
+    color: #FFFFFF;
+    border: 1px solid #C84628;
+    font-weight: 700;
+}
+
+QPushButton#pushButton_2:hover {
+    background-color: #EB5B3B;
+    border-color: #EB5B3B;
+}
+
+QPushButton#pushButton_2:pressed {
+    background-color: #A93820;
+    border-color: #A93820;
+}
+
+QPushButton#pushButton_2:disabled {
+    background-color: #542B25;
+    color: #A5A9B2;
+    border-color: #542B25;
+}
+
+
+/* ------------------------------------------------------------
+   SECONDARY ACTIONS - LOAD AND DRAW
+   ------------------------------------------------------------ */
+
+QPushButton#pushButton,
+QPushButton#pushButton_5 {
+    background-color: #24272D;
+    color: #F5F6F8;
+    border: 1px solid #454951;
+}
+
+QPushButton#pushButton:hover,
+QPushButton#pushButton_5:hover {
+    background-color: #2D3037;
+    border-color: #C84628;
+}
+
+
+/* ------------------------------------------------------------
+   VIEWER CONTROLS - OK.. RESTART.. CANCEL.. BACK
+   ------------------------------------------------------------ */
+
+QPushButton#pushButton_3,
+QPushButton#pushButton_6,
+QPushButton#pushButton_7,
+QPushButton#pushButton_8 {
+    background-color: #1B1D21;
+    color: #A5A9B2;
+    border: 1px solid #373A40;
+    padding: 6px 10px;
+    font-size: 9pt;
+}
+
+QPushButton#pushButton_3:hover,
+QPushButton#pushButton_6:hover,
+QPushButton#pushButton_7:hover,
+QPushButton#pushButton_8:hover {
+    background-color: #2D3037;
+    color: #F5F6F8;
+    border-color: #656973;
+}
+
+
+/* ------------------------------------------------------------
+   RESET
+   ------------------------------------------------------------ */
+
+QPushButton#pushButton_4 {
+    background-color: #2A1C1A;
+    color: #EB5B3B;
+    border: 1px solid #713528;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 8px 22px;
+}
+
+QPushButton#pushButton_4:hover {
+    background-color: #542B25;
+    color: #FFFFFF;
+    border-color: #C84628;
+}
+
+QPushButton#pushButton_4:pressed {
+    background-color: #8F321F;
+    border-color: #EB5B3B;
+}
+
+
+/* ------------------------------------------------------------
+   ANTIBODY MEMORY VIEWER
+   ------------------------------------------------------------ */
+
+QGraphicsView#graphicsView {
+    background-color: #17191D;
+    border: 1px solid #373A40;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+
+QGraphicsView#graphicsView:focus {
+    border: 1px solid #656973;
+}
+
+
+/* ------------------------------------------------------------
+   PER-CLASS PERFORMANCE PLOT
+   ------------------------------------------------------------ */
+
+QGraphicsView#graphicsView_2 {
+    background-color: #17191D;
+    border: 1px solid #373A40;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QGraphicsView#graphicsView_2:focus {
+    border: 1px solid #656973;
+}
+
+
+/* ------------------------------------------------------------
+   TRAINING PROGRESS
+   ------------------------------------------------------------ */
+
+QProgressBar#progressBar {
+    background-color: #24272D;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Aptos Mono";
+    font-size: 9pt;
+    font-weight: 600;
+    min-height: 18px;
+    max-height: 22px;
+}
+
+QProgressBar#progressBar::chunk {
+    background-color: #C84628;
+    border-radius: 3px;
+}
+
+
+/* ------------------------------------------------------------
+   OPTIONAL INPUT WIDGETS
+   ------------------------------------------------------------ */
+
+QLineEdit,
+QSpinBox,
+QDoubleSpinBox,
+QComboBox {
+    background-color: #1B1D21;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    border-radius: 5px;
+    padding: 6px 8px;
+    selection-background-color: #C84628;
+}
+
+QLineEdit:hover,
+QSpinBox:hover,
+QDoubleSpinBox:hover,
+QComboBox:hover {
+    border-color: #656973;
+}
+
+QLineEdit:focus,
+QSpinBox:focus,
+QDoubleSpinBox:focus,
+QComboBox:focus {
+    border-color: #EB5B3B;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1B1D21;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    selection-background-color: #C84628;
+    selection-color: #FFFFFF;
+}
+
+
+/* ------------------------------------------------------------
+   OPTIONAL SCROLLBARS
+   ------------------------------------------------------------ */
+
+QScrollBar:vertical {
+    background-color: #121316;
+    width: 10px;
+    margin: 2px;
+    border: none;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #454951;
+    min-height: 24px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #656973;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color: #121316;
+    height: 10px;
+    margin: 2px;
+    border: none;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #454951;
+    min-width: 24px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #656973;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+
+/* ------------------------------------------------------------
+   MENU AND STATUS BAR
+   ------------------------------------------------------------ */
+
+QMenuBar {
+    background-color: #121316;
+    color: #A5A9B2;
+    border-bottom: 1px solid #373A40;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 6px 10px;
+}
+
+QMenuBar::item:selected {
+    background-color: #24272D;
+    color: #F5F6F8;
+}
+
+QMenu {
+    background-color: #1B1D21;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 24px 6px 12px;
+}
+
+QMenu::item:selected {
+    background-color: #C84628;
+    color: #FFFFFF;
+}
+
+QStatusBar {
+    background-color: #121316;
+    color: #A5A9B2;
+    border-top: 1px solid #373A40;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+QToolButton {
+    background-color: #24272D;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+QToolButton:hover {
+    background-color: #2D3037;
+    border-color: #C84628;
+}
+
+QToolButton:pressed {
+    background-color: #191B1F;
+    border-color: #EB5B3B;
+}
+
+
+/* ============================================================
+   DATA LOAD DIALOG
+   ============================================================ */
+
+/* Dialog background */
+QDialog#DataLoad {
+    background-color: #121316;
+    color: #F5F6F8;
+}
+
+/* Class-selection buttons */
+QDialog#DataLoad QToolButton {
+    background-color: #24272D;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    border-radius: 6px;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 2px;
+    font-size: 10pt;
+}
+
+QDialog#DataLoad QToolButton:hover {
+    background-color: #2D3037;
+    border: 1px solid #C84628;
+}
+
+QDialog#DataLoad QToolButton:checked {
+    background-color: #C84628;
+    color: #FFFFFF;
+    border: 1px solid #EB5B3B;
+}
+
+QDialog#DataLoad QToolButton:pressed {
+    background-color: #A93820;
+    border: 1px solid #EB5B3B;
+}
+
+/* OK and Cancel buttons */
+QDialog#DataLoad QDialogButtonBox QPushButton {
+    background-color: #24272D;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    border-radius: 5px;
+    padding: 6px 18px;
+    min-height: 18px;
+}
+
+QDialog#DataLoad QDialogButtonBox QPushButton:hover {
+    background-color: #2D3037;
+    border-color: #C84628;
+}
+
+QDialog#DataLoad QDialogButtonBox QPushButton:default {
+    background-color: #C84628;
+    color: #FFFFFF;
+    border-color: #C84628;
+}
+
+QDialog#DataLoad QDialogButtonBox QPushButton:pressed {
+    background-color: #A93820;
+}
+
+/* ------------------------------------------------------------
+   View navigation (Test / Training / Memory / Metrics)
+   ------------------------------------------------------------ */
+
+QPushButton#navButton {
+    background-color: transparent;
+    color: #A5A9B2;
+    border: 1px solid transparent;
+    border-bottom: 2px solid #373A40;
+    border-radius: 0px;
+    padding: 6px 16px;
+    font-size: 9.5pt;
+}
+
+QPushButton#navButton:hover {
+    color: #F5F6F8;
+    background-color: #1B1D21;
+}
+
+QPushButton#navButton:checked {
+    color: #F5F6F8;
+    background-color: #1B1D21;
+    border-bottom: 2px solid #C84628;
+    font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------
+   Training view
+   ------------------------------------------------------------ */
+
+QLabel#viewHeadline {
+    color: #F5F6F8;
+    font-size: 10.5pt;
+    font-weight: 600;
+    padding: 2px 0px;
+}
+
+QLabel#statLabel {
+    background-color: #1B1D21;
+    border: 1px solid #373A40;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+QPlainTextEdit {
+    background-color: #17191D;
+    color: #A5A9B2;
+    border: 1px solid #373A40;
+    border-radius: 6px;
+    padding: 4px;
+    font-family: "Aptos Mono", "Consolas", monospace;
+    font-size: 8.5pt;
+}
+
+
+/* ------------------------------------------------------------
+   Memory view tabs
+   ------------------------------------------------------------ */
+
+QTabWidget::pane {
+    border: 1px solid #373A40;
+    border-radius: 6px;
+    background-color: #1B1D21;
+    top: -1px;
+}
+
+QTabBar::tab {
+    background-color: #121316;
+    color: #A5A9B2;
+    border: 1px solid #373A40;
+    border-bottom: none;
+    padding: 5px 14px;
+    margin-right: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+QTabBar::tab:selected {
+    background-color: #1B1D21;
+    color: #F5F6F8;
+    border-top: 2px solid #C84628;
+}
+
+QTabBar::tab:hover:!selected {
+    color: #F5F6F8;
+}
+
+
+/* ------------------------------------------------------------
+   Metrics table
+   ------------------------------------------------------------ */
+
+QTableWidget {
+    background-color: #17191D;
+    alternate-background-color: #1B1D21;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    border-radius: 6px;
+    gridline-color: #2B2D32;
+}
+
+QTableWidget::item {
+    padding: 3px 6px;
+    border: none;
+}
+
+QHeaderView::section {
+    background-color: #1B1D21;
+    color: #A5A9B2;
+    border: none;
+    border-bottom: 1px solid #373A40;
+    padding: 5px 8px;
+    font-size: 8.5pt;
+}
+
+QScrollArea {
+    background-color: transparent;
+}
+
+QScrollArea > QWidget > QWidget {
+    background-color: transparent;
+}
+
+
+/* ------------------------------------------------------------
+   Small additions: draw toggle, dialogs, tooltips, greyed classes
+   ------------------------------------------------------------ */
+
+/* Draw button while draw mode is on */
+QPushButton#pushButton_5:checked {
+    background-color: #3A2520;
+    border-color: #EB5B3B;
+    color: #FFFFFF;
+}
+
+/* Dialogs (confirmations, errors) and tooltips follow the dark palette */
+QMessageBox,
+QDialog {
+    background-color: #121316;
+}
+
+QToolTip {
+    background-color: #1B1D21;
+    color: #F5F6F8;
+    border: 1px solid #373A40;
+    padding: 4px 6px;
+}
+
+/* Classes already loaded or trained: visibly greyed out in the loader */
+QDialog#DataLoad QToolButton:disabled {
+    background-color: #17191D;
+    border: 1px solid #2B2D32;
+}
